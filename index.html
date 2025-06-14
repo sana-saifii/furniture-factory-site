@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Furniture Factory Bangalore - Premium Furniture for Your Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Controls -->
+  <div class="nav-controls">
+  <button class="nav-btn prev-btn" onclick="goBack()">← Back</button>
+  <button class="nav-btn next-btn" onclick="goNext()">Next →</button>
+</div>
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>The Furniture Factory Bangalore</h1>
+      <div class="header-image">
+        <img src="images/furniture-header.jpg" alt="Premium Furniture Collection" class="hero-image">
+      </div>
+      
+      <!-- Navigation Menu -->
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="sofas.html" class="nav-link">Sofas</a>
+        <a href="beds.html" class="nav-link">Beds</a>
+        <a href="wardrobes.html" class="nav-link">Wardrobes</a>
+        <a href="kitchen.html" class="nav-link">Kitchen</a>
+        <a href="chairs.html" class="nav-link">Chairs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      
+      <!-- Contact Buttons -->
+      <div class="contact-buttons">
+        <a href="https://wa.me/918867843059" class="contact-btn whatsapp-btn" target="_blank">
+           WhatsApp
+        </a>
+        <a href="tel:+918867843059" class="contact-btn call-btn">
+          Call Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Furniture Categories -->
+    <section class="categories-section">
+      <div class="container">
+        <h2>Our Furniture Categories</h2>
+        <div class="category-buttons">
+          <button class="category-btn" onclick="navigateToCategory('sofas')">
+            <img src="images/sofa-icon.jpg" alt="Sofas">
+            <span>Sofas</span>
+          </button>
+          
+          <button class="category-btn" onclick="navigateToCategory('beds')">
+            <img src="images/bed-icon.jpg" alt="Beds">
+            <span>Beds</span>
+          </button>
+          
+          <button class="category-btn" onclick="navigateToCategory('wardrobes')">
+            <img src="images/wardrobe-icon.jpg" alt="Wardrobes">
+            <span>Wardrobes</span>
+          </button>
+          
+          <button class="category-btn" onclick="navigateToCategory('kitchen')">
+            <img src="images/kitchen-icon.jpg" alt="Kitchen">
+            <span>Kitchen</span>
+          </button>
+          
+          <button class="category-btn" onclick="navigateToCategory('chairs')">
+            <img src="images/chair-icon.jpg" alt="Chairs">
+            <span>Chairs</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+<section class="about-section">
+  <div class="container">
+    <h2>About The Furniture Factory Bangalore</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Welcome to The Furniture Factory Bangalore, your trusted destination for premium quality furniture that transforms houses into homes. With years of experience in crafting exceptional furniture pieces, we take pride in delivering comfort, style, and durability in every product.</p>
+        
+        <p>Our extensive collection includes luxurious sofas, comfortable beds, spacious wardrobes, functional kitchen furniture, and elegant chairs - all designed to meet the diverse needs of modern Indian families.</p>
+        
+        <div class="about-highlights">
+          <div class="highlight">
+            <h3>Premium Quality</h3>
+            <p>Only the finest materials and craftsmanship</p>
+          </div>
+          <div class="highlight">
+            <h3>Home Delivery</h3>
+            <p>Delivery across Bangalore</p>
+          </div>
+          <div class="highlight">
+            <h3>Custom Design</h3>
+            <p>Tailored furniture for your space</p>
+          </div>
+          <div class="highlight">
+            <h3>Warranty</h3>
+            <p>Quality guarantee on all products</p>
+          </div>
+          <div class="highlight">
+            <h3>Affordable Pricing</h3>
+            <p>Best prices without compromising quality</p>
+          </div>
+          <div class="highlight">
+            <h3>Modern Designs</h3>
+            <p>Contemporary styles for today's homes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+/* About Section Styles */
+.about-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  text-align: center;
+  max-width: 1000px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #87CEEB 0%, #ADD8E6 100%);
+  padding: 30px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(135, 206, 235, 0.2);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(135, 206, 235, 0.3);
+}
+
+.highlight h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.highlight p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .highlight {
+    padding: 25px 20px;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .highlight h3 {
+    font-size: 1.2rem;
+  }
+}
+</style>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>📍 19, 6th cross, maruti saw mill road, Corion Church Rd, Vidyasagar Layout, Saraipalya, Thanisandra, Bengaluru, Karnataka 560077</p>
+          <p>📞 +91 88678 43059</p>
+          <p>✉️ ibrhanas@gmail.com</p>
+          <p>🕒 Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="sofas.html">Sofas</a>
+          <a href="beds.html">Beds</a>
+          <a href="wardrobes.html">Wardrobes</a>
+          <a href="kitchen.html">Kitchen</a>
+          <a href="chairs.html">Chairs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+             <a href="https://wa.me/918867843059" target="_blank">📱 WhatsApp</a>
+        <a href="https://instagram.com/thefurniturefactorybangalore" target="_blank">📷 Instagram</a>
+        <a href="https://facebook.com/nawab8901" target="_blank">📘 Facebook</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Furniture Factory Bangalore. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // Navigation function for category buttons
+  function navigateToCategory(category) {
+    document.body.style.transition = 'opacity 0.3s ease';
+    document.body.style.opacity = '0.7';
+    setTimeout(() => {
+      window.location.href = category + '.html';
+    }, 200);
+  }
+
+  // Glowing nav buttons
+  document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 0 20px rgba(102, 126, 234, 0.6)';
+    });
+    btn.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+    });
+  });
+
+  // Smart nav logic
+  const pages = [
+    "index.html",
+    "sofas.html",
+    "beds.html",
+    "wardrobes.html",
+    "kitchen.html",
+    "chairs.html",
+    "contact.html"
+  ];
+
+  let current = window.location.pathname.split("/").pop() || "index.html";
+  const currentIndex = pages.indexOf(current);
+
+  function goNext() {
+    if (currentIndex < pages.length - 1) {
+      location.href = pages[currentIndex + 1];
+    }
+  }
+
+  function goBack() {
+    if (currentIndex > 0) {
+      location.href = pages[currentIndex - 1];
+    }
+  }
+
+  window.onload = () => {
+    if (currentIndex === 0) {
+      const backBtn = document.querySelector(".prev-btn");
+      if (backBtn) backBtn.style.display = "none";
+    }
+    if (currentIndex === pages.length - 1) {
+      const nextBtn = document.querySelector(".next-btn");
+      if (nextBtn) nextBtn.style.display = "none";
+    }
+  };
+</script>
+</body>
+</html>

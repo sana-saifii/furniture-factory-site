@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Furniture Factory Bangalore</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    /* Navigation Controls */
+    .nav-controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-btn {
+      background: linear-gradient(145deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      background: linear-gradient(145deg, #764ba2, #667eea);
+    }
+
+    /* Navigation Menu */
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .nav-link.active {
+      background: rgba(255,255,255,0.4);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+
+    .contact-hero {
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .contact-hero h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Contact Info Cards */
+    .contact-info {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.9);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .info-card h3 {
+      color: #667eea;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-card p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .info-card a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .info-card a:hover {
+      color: #764ba2;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: rgba(255,255,255,0.9);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      animation: slideInRight 1s ease-out;
+    }
+
+    .contact-form h3 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e1e8ed;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.8);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .submit-btn:hover::before {
+      left: 100%;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Quick Actions */
+    .quick-actions {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-decoration: none;
+      padding: 18px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+      animation: bounceIn 1s ease-out 0.6s both;
+    }
+
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .action-btn:hover::before {
+      left: 100%;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    }
+
+    .whatsapp-btn {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .whatsapp-btn:hover {
+      box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+    }
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-controls {
+        position: static;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-hero h2 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 2rem 0 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      color: #ecf0f1;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #bdc3c7;
+      text-decoration: none;
+      line-height: 1.8;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #667eea;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #34495e;
+      color: #95a5a6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Controls -->
+  <div class="nav-controls">
+  <button class="nav-btn prev-btn" onclick="goBack()">← Back</button>
+  <button class="nav-btn next-btn" onclick="goNext()">Next →</button>
+</div>
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Contact Us</h1>
+      
+      <!-- Navigation Menu -->
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="sofas.html" class="nav-link">Sofas</a>
+        <a href="beds.html" class="nav-link">Beds</a>
+        <a href="wardrobes.html" class="nav-link">Wardrobes</a>
+        <a href="kitchen.html" class="nav-link">Kitchen</a>
+        <a href="chairs.html" class="nav-link">Chairs</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Contact Hero -->
+      <div class="contact-hero">
+        <h2>Get In Touch With Us</h2>
+        <p>Ready to transform your home with premium furniture? We're here to help you every step of the way. Contact us for free quotes, consultations, or any questions about our products.</p>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="quick-actions">
+        <a href="https://wa.me/918867843059" class="action-btn whatsapp-btn" target="_blank">
+          📱 WhatsApp Chat
+        </a>
+        <a href="tel:+918867843059" class="action-btn">
+          📞 Call Now
+        </a>
+      </div>
+
+      <!-- Contact Grid -->
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>📍 Visit Us</h3>
+            <p>19, 6th cross, maruti saw mill road, Corion Church Rd, Vidyasagar Layout, Saraipalya, Thanisandra, Bengaluru, Karnataka 560077</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📞 Call Us</h3>
+            <p>Phone: <a href="tel:+918867843059">+91 88678 43059</a></p>
+            <p>We're available Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</p>
+          </div>
+
+          <div class="info-card">
+            <h3>✉️ Email Us</h3>
+            <p>Email: <a href="mailto:ibrhanas@gmail.com">ibrhanas@gmail.com</a></p>
+            <p>We'll respond within 24 hours</p>
+          </div>
+
+          <div class="info-card">
+            <h3>🌐 Follow Us</h3>
+            <p>
+              <a href="https://wa.me/918867843059" target="_blank">📱 WhatsApp</a><br>
+              <a href="https://instagram.com/thefurniturefactorybangalore" target="_blank">📷 Instagram</a><br>
+              <a href="https://facebook.com/nawab8901" target="_blank">📘 Facebook</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send Us A Message</h3>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="furnitureType">Interested In</label>
+              <select id="furnitureType" name="furnitureType">
+                <option value="">Select Furniture Type</option>
+                <option value="sofas">Sofas</option>
+                <option value="beds">Beds</option>
+                <option value="wardrobes">Wardrobes</option>
+                <option value="kitchen">Kitchen Furniture</option>
+                <option value="chairs">Chairs</option>
+                <option value="custom">Custom Design</option>
+                <option value="consultation">Free Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="">Select Budget Range</option>
+                <option value="under-25000">Under ₹25,000</option>
+                <option value="25000-50000">₹25,000 - ₹50,000</option>
+                <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+                <option value="100000-200000">₹1,00,000 - ₹2,00,000</option>
+                <option value="above-200000">Above ₹2,00,000</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements, preferred style, dimensions, or any specific questions..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>📍 19, 6th cross, maruti saw mill road, Corion Church Rd, Vidyasagar Layout, Saraipalya, Thanisandra, Bengaluru, Karnataka 560077</p>
+          <p>📞 +91 88678 43059</p>
+          <p>✉️ ibrhanas@gmail.com</p>
+          <p>🕒 Mon-Sat: 9AM-7PM, Sun: 10AM-5PM</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a><br>
+          <a href="sofas.html">Sofas</a><br>
+          <a href="beds.html">Beds</a><br>
+          <a href="wardrobes.html">Wardrobes</a><br>
+          <a href="kitchen.html">Kitchen</a><br>
+          <a href="chairs.html">Chairs</a><br>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <a href="https://wa.me/918867843059" target="_blank">📱 WhatsApp</a><br>
+          <a href="https://instagram.com/thefurniturefactorybangalore" target="_blank">📷 Instagram</a><br>
+          <a href="https://facebook.com/nawab8901" target="_blank">📘 Facebook</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 The Furniture Factory Bangalore. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission with WhatsApp integration
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const firstName = formData.get('firstName');
+      const lastName = formData.get('lastName');
+      const phone = formData.get('phone');
+      const email = formData.get('email');
+      const furnitureType = formData.get('furnitureType');
+      const budget = formData.get('budget');
+      const message = formData.get('message');
+      
+      // Button loading effect
+      const submitBtn = document.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Preparing WhatsApp...';
+      submitBtn.style.background = 'linear-gradient(135deg, #95a5a6, #7f8c8d)';
+      
+      // Create WhatsApp message
+      let whatsappMessage = ` *New Inquiry - The Furniture Factory Bangalore*\n\n`;
+      whatsappMessage += ` *Customer Details:*\n`;
+      whatsappMessage += `• Name: ${firstName}${lastName ? ' ' + lastName : ''}\n`;
+      whatsappMessage += `• Phone: ${phone}\n`;
+      if (email) whatsappMessage += `• Email: ${email}\n`;
+      
+      whatsappMessage += `\n *Inquiry Details:*\n`;
+      if (furnitureType) {
+        const furnitureTypes = {
+          'sofas': 'Sofas',
+          'beds': 'Beds',
+          'wardrobes': 'Wardrobes',
+          'kitchen': 'Kitchen Furniture',
+          'chairs': 'Chairs',
+          'custom': 'Custom Design',
+          'consultation': 'Free Consultation'
+        };
+        whatsappMessage += `• Interested in: ${furnitureTypes[furnitureType] || furnitureType}\n`;
+      }
+      
+      if (budget) {
+        const budgetRanges = {
+          'under-25000': 'Under ₹25,000',
+          '25000-50000': '₹25,000 - ₹50,000',
+          '50000-100000': '₹50,000 - ₹1,00,000',
+          '100000-200000': '₹1,00,000 - ₹2,00,000',
+          'above-200000': 'Above ₹2,00,000'
+        };
+        whatsappMessage += `• Budget: ${budgetRanges[budget] || budget}\n`;
+      }
+      
+      if (message) {
+        whatsappMessage += `\n *Customer Message:*\n${message}\n`;
+      }
+      
+      whatsappMessage += `\n *Inquiry Date:* ${new Date().toLocaleDateString('en-IN', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })}`;
+      
+      // WhatsApp number (your number)
+      const whatsappNumber = "918867843059";
+      
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+      
+      // Simulate loading then redirect to WhatsApp
+      setTimeout(() => {
+        submitBtn.textContent = 'Opening WhatsApp...';
+        submitBtn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+        
+        // Show success message
+        setTimeout(() => {
+          submitBtn.textContent = '✓ WhatsApp Opened!';
+          alert(`Thank you ${firstName}! Your inquiry has been prepared and WhatsApp should open now. Please send the message to complete your request.`);
+          
+          // Reset form and button
+          setTimeout(() => {
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+          }, 3000);
+        }, 500);
+      }, 1000);
+    });
+
+    // Enhanced button hover effects
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('mouseenter', function() {
+        this.style.boxShadow = '0 0 20px rgba(102, 126, 234, 0.6)';
+      });
+      
+      btn.addEventListener('mouseleave', function() {
+        this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+      });
+    });
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add entrance animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.info-card, .contact-form').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+    //Buttons
+  const pages = [
+    "index.html",
+    "sofas.html",
+    "beds.html",
+    "wardrobes.html",
+    "kitchen.html",
+    "chairs.html",
+    "contact.html"
+  ];
+
+  let current = window.location.pathname.split("/").pop();
+  if (!current || current === "/") current = "index.html";
+
+  const currentIndex = pages.indexOf(current);
+
+  function goNext() {
+    if (currentIndex < pages.length - 1) {
+      location.href = pages[currentIndex + 1];
+    }
+  }
+
+  function goBack() {
+    if (currentIndex > 0) {
+      location.href = pages[currentIndex - 1];
+    }
+  }
+
+  window.onload = () => {
+    if (currentIndex === 0) document.querySelector(".prev-btn").style.display = "none";
+    if (currentIndex === pages.length - 1) document.querySelector(".next-btn").style.display = "none";
+  };
+  </script>
+</body>
+</html>
