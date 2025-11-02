@@ -87,7 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <input type="hidden" name="access_key" value="0e81d733-3d8f-4ac6-842a-71cbafdbb70b">
 
   <!-- Redirect after submission -->
-  <input type="hidden" name="redirect" value="https://proFurniturecontrolbangalore.in/thank-you.html">
+  <input type="hidden" name="redirect" value="https://furniturefactorybangalore.com/thank-you.html">
 
   <!-- Email Subject -->
   <input type="hidden" name="subject" value="New Furniture Inquiry">
@@ -110,9 +110,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-12 col-md-6 mb-3">
       <input type="text" class="form-control form-control-lg rounded-3" name="name" placeholder="Your Name*" required>
     </div>
-    <div class="col-12 col-md-6 mb-3">
-      <input type="tel" class="form-control form-control-lg rounded-3" name="phone" placeholder="Phone Number*" required>
-    </div>
+<div class="col-12 col-md-6 mb-3">
+  <input 
+    type="tel" 
+    class="form-control form-control-lg rounded-3" 
+    name="phone" 
+    placeholder="Phone Number*" 
+    pattern="[0-9]{10}" 
+    maxlength="10" 
+    required 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    title="Please enter a 10-digit phone number">
+</div>
+
   </div>
 
   <!-- Optional Honeypot (spam protection) -->
