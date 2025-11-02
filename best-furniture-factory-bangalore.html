@@ -82,46 +82,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </p>
             <h4 class="text-danger fw-semibold">Lowest   <span class="text-danger fw-bold">Price Gauranteed</span> </h4>
           </div>
+<form action="https://api.web3forms.com/submit" method="POST" id="booknow">
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="0e81d733-3d8f-4ac6-842a-71cbafdbb70b">
 
-          <form action="https://formsubmit.co/adservice8289@gmail.com" method="POST" id="booknow">
-            <!-- Hidden inputs -->
-            <input type="hidden" name="_captcha" value="false">
+  <!-- Redirect after submission -->
+  <input type="hidden" name="redirect" value="https://proFurniturecontrolbangalore.in/thank-you.html">
 
-            <input type="hidden" name="_next" value="https://proFurniturecontrolbangalore.in/thank-you.html">
-            <input type="hidden" name="_subject" value="New Furniture Control Inquiry">
-            <input type="hidden" name="_next" value="https://furniturefactorybangalore.com">
-            <input type="hidden" name="_subject" value="New Furniture Inquiry">
+  <!-- Email Subject -->
+  <input type="hidden" name="subject" value="New Furniture Inquiry">
 
-            <div class="mb-3">
-              <select name="service" class="form-select form-select-lg rounded-3" required>
-                <option selected disabled>Select Furniture</option>
-                <option>Kitchen</option>
-                <option>Wardrobe</option>
-                <option>Home Furnishing</option>
-                <option>Interior Work</option>
-                <option>Other</option>
-              </select>
-            </div>
+  <!-- Optional: Disable CAPTCHA -->
+  <input type="hidden" name="captcha" value="false">
 
-            <div class="row">
-              <div class="col-12 col-md-6 mb-3">
-                <input type="text" class="form-control form-control-lg rounded-3" name="name" placeholder="Your Name*" required>
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <input type="tel" class="form-control form-control-lg rounded-3" name="phone" placeholder="Phone Number*" required>
-              </div>
-            </div>
+  <div class="mb-3">
+    <select name="service" class="form-select form-select-lg rounded-3" required>
+      <option selected disabled>Select Furniture</option>
+      <option>Kitchen</option>
+      <option>Wardrobe</option>
+      <option>Home Furnishing</option>
+      <option>Interior Work</option>
+      <option>Other</option>
+    </select>
+  </div>
 
-            <div class="mb-3 antispam d-none">
-              <label>Leave this empty: <input name="booking"></label>
-            </div>
+  <div class="row">
+    <div class="col-12 col-md-6 mb-3">
+      <input type="text" class="form-control form-control-lg rounded-3" name="name" placeholder="Your Name*" required>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+      <input type="tel" class="form-control form-control-lg rounded-3" name="phone" placeholder="Phone Number*" required>
+    </div>
+  </div>
 
-            <div class="d-grid">
-              <button type="submit" class="btn btn-success btn-lg rounded-pill">
-                <i class="bi bi-shield-fill-check me-2"></i> Free Price Estimate
-              </button>
-            </div>
-          </form>
+  <!-- Optional Honeypot (spam protection) -->
+  <div class="mb-3 d-none">
+    <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+  </div>
+
+  <div class="d-grid">
+    <button type="submit" class="btn btn-success btn-lg rounded-pill">
+      <i class="bi bi-shield-fill-check me-2"></i> Free Price Estimate
+    </button>
+  </div>
+</form>
+
         </div>
       </div>
 
